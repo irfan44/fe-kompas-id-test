@@ -1,16 +1,3 @@
-<script>
-import AddItemModal from "../Modals/AddItemModal.vue";
-
-export default {
-  components: { AddItemModal },
-  data() {
-    return {
-      showModal: false,
-    };
-  },
-};
-</script>
-
 <template>
   <header>
     <div class="text-center">
@@ -26,3 +13,16 @@ export default {
   </header>
   <AddItemModal v-show="showModal" @close-modal="showModal = false" />
 </template>
+
+<script>
+import AddItemModal from "../Modals/AddItemModal.vue";
+
+export default {
+  components: { AddItemModal },
+  data() {
+    return {
+      showModal: false,
+    };
+  },
+};
+</script>
