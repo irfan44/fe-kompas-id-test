@@ -1,13 +1,11 @@
 <script>
-import HomeHeader from "./components/Headers/HomeHeader.vue";
+import HomePage from "./pages/HomePage.vue";
 
 export default {
-  components: { HomeHeader },
+  components: { HomePage },
 };
 </script>
 
 <template>
-  <main class="mx-auto max-w-[95%] py-8">
-    <HomeHeader />
-  </main>
+  <HomePage />
 </template>
