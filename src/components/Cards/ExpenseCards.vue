@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-4 gap-4 mt-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
     <div
       class="py-6 px-4 border shadow-md h-full space-y-2 rounded"
       v-for="(expense, date) in expenses"
