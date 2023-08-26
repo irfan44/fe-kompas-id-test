@@ -74,7 +74,7 @@ export default {
       try {
         const newExpense = {
           // Create hour with HH:MM format
-          jam: new Date().toLocaleTimeString(["en-US"], {
+          jam: new Date().toLocaleTimeString(navigator.language, {
             hour: "2-digit",
             minute: "2-digit",
             hour12: false,
