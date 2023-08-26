@@ -22,8 +22,8 @@ export default {
   methods: {
     calculateTotalExpense() {
       let totalExpense = 0;
-      Object.keys(this.expenses).forEach((date) => {
-        this.expenses[date].forEach((item) => {
+      Object.values(this.expenses).forEach((expense) => {
+        expense.forEach((item) => {
           totalExpense += item.pengeluaran;
         });
       });
