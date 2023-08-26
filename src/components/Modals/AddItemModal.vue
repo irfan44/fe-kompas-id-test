@@ -90,6 +90,7 @@ export default {
         };
         await axios.post("http://localhost:3000/detail", newExpense);
         this.$emit("refresh-page");
+        this.$emit("close-modal");
         this.resetForm();
       } catch (error) {
         console.log("Failed to add data" + error);
