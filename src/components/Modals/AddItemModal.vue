@@ -47,6 +47,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
@@ -62,13 +64,35 @@ export default {
       this.$emit("close-modal");
       this.resetForm();
     },
-    submitForm() {
+    async submitForm() {
       this.errorMsg = "";
       if (this.formData.name.length === 0 || this.formData.price.length === 0) {
         this.errorMsg = "Mohon isi semua form";
-      } else {
-        // Execute submit form
+        return;
+      }
+
+      try {
+        const newExpense = {
+          // Create hour with HH:MM format
+          jam: new Date().toLocaleTimeString(["en-US"], {
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: false,
+          }),
+          // Create date with dd MMMM YYYY
+          tanggal: new Date().toLocaleDateString(["id-ID"], {
+            day: "2-digit",
+            month: "long",
+            year: "numeric",
+          }),
+          nama: this.formData.name,
+          pengeluaran: this.formData.price,
+        };
+        await axios.post("http://localhost:3000/detail", newExpense);
+        this.$emit("refresh-page");
         this.resetForm();
+      } catch (error) {
+        console.log("Failed to add data" + error);
       }
     },
     resetForm() {

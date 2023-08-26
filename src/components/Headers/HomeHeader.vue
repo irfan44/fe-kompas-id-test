@@ -5,15 +5,8 @@
       <p class="font-medium text-xl">
         Pengeluaran Bulan Ini {{ formatCurrency(totalExpense) }}
       </p>
-      <button
-        class="p-2 bg-indigo-800 text-white mt-4"
-        @click="showModal = true"
-      >
-        TAMBAH ITEM
-      </button>
     </div>
   </header>
-  <AddItemModal v-show="showModal" @close-modal="showModal = false" />
 </template>
 
 <script>
@@ -30,11 +23,6 @@ export default {
   },
   computed: {
     ...mapGetters(["formatCurrency"]),
-  },
-  data() {
-    return {
-      showModal: false,
-    };
   },
 };
 </script>
