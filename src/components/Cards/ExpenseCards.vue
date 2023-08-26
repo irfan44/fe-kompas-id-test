@@ -4,7 +4,7 @@
       class="py-6 px-4 border shadow-md h-full space-y-2 rounded"
       v-for="(expense, date) in expenses"
     >
-      <h3 class="font-bold text-lg">{{ date }}</h3>
+      <h3 class="font-bold text-lg">{{ convertDate(date) }}</h3>
       <div class="border-b-2">
         <div
           class="flex justify-between border-t pl-2 py-2"
@@ -47,6 +47,9 @@ export default {
         total += item.pengeluaran;
       });
       return total;
+    },
+    convertDate(date) {
+      return date.split(" ").slice(0, 2).join(" ");
     },
   },
 };
