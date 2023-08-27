@@ -10,11 +10,9 @@
 </template>
 
 <script>
-import AddItemModal from "../Modals/AddItemModal.vue";
 import { mapGetters } from "vuex";
 
 export default {
-  components: { AddItemModal },
   props: {
     totalExpense: {
       type: Number,
