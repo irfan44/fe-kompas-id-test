@@ -4,6 +4,7 @@
 This project is part of Kompas.id Frontend Developer test
 
 <img src="docs/screenshot.png" alt="Screenshot">
+<img src="docs/screenshot-add-expense.png" alt="Screenshot Add Expense">
 
 ## Getting Started
 
