@@ -3,6 +3,8 @@
 ## About
 This project is part of Kompas.id Frontend Developer test
 
+<img src="docs/screenshot.png" alt="Screenshot">
+
 ## Getting Started
 
 ### Prerequisites
