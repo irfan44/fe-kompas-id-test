@@ -1,7 +1,36 @@
-# Vue 3 + Vite
+# Diari Jajan - Irfan Nurghiffari Muhajir
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## About
+This project is part of Kompas.id Frontend Developer test
 
-## Recommended IDE Setup
+## Getting Started
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### Prerequisites
+1. NodeJS & npm installed in your machine
+2. Git installed
+
+### How to Run
+1. Clone repo to your local machine. After it finished, open the folder and install project dependencies. You can do this from your powershell/terminal :
+
+```bash
+# Clone this repository
+git clone https://github.com/irfan44/fe-kompas-id-test.git
+# Go to repository folder
+cd fe-kompas-id-test
+# Install dependencies
+npm install
+```
+
+2. Run the json-server to serve our JSON data
+
+```bash
+npx json-server --id nama --watch items.json
+```
+
+3. Open another powershell/terminal. Run the app
+
+```bash
+npm run dev
+```
+
+4. Open `http://localhost:5173` to view the app in your browser
